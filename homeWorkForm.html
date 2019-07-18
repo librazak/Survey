@@ -1,0 +1,107 @@
+<!--1. 表單 <form> -->
+<!-- http://www.w3schools.com/html/html_form_input_types.asp -->
+<!--提供介面，讓使用者輸入表單-->
+<!--交給後端做進一步的處理，然後接收回傳訊息給使用者-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> HTML - Form </title>
+
+    <style>
+        /* 透過改變滑鼠的樣式，告訴使用者目前是否有點選到 cursor */
+    </style>
+</head>
+
+<body>
+
+    <!-- 1-1. 製作一份表單-->
+    <!--   a. 標題：通勤工具使用調查-->
+    <!--   b. 在<body>裡面放入一個表單<form>-->
+    <!--   c. 在表單<form>內加入 姓名 輸入欄位<input type="text">-->
+    <!--   d. 在表單<form>內加入 電話 輸入欄位<input type="text">-->
+    <h2>通勤工具使用調查</h2>
+    <form action="/action_page.php">
+        <div>
+            <label for="userName">姓名：</label>
+            <input type="text" name="userName" id="userName" placeholder="王小明">
+        </div>
+        <br>
+        <div>
+            <label for="userPhone">電話：</label>
+            <input type="tel" name="userPhone" id="userPhone" placeholder="0932123456">  
+        </div>
+        <br>
+        <div>
+            <label for="">職業：</label>
+            <input type="radio" name="job" id="student">
+            <label for="student">學生</label>
+            <input type="radio" name="job" id="teacher">
+            <label for="teacher">老師</label>
+        </div>
+        <br>
+        <div>
+            年紀：
+            <input type="radio" name="age" id="">
+            20-30
+            <input type="radio" name="age" id="">
+            30-40
+        </div>
+        <br>
+        <div>
+            交通工具：
+            <input type="checkbox" name="vehicle" id="">
+            腳踏車
+            <input type="checkbox" name="vehicle" id="">
+            公車
+            <input type="checkbox" name="vehicle" id="">
+            摩托車
+            <input type="checkbox" name="vehicle" id="">
+            汽車
+        </div>
+        <br>
+        <div>
+            通訊地址:
+            <select name="county">
+                <option value="null">請選擇</option>
+                <option value="彰化縣">彰化縣</option>
+                <option value="南投縣">南投縣</option>
+                <option value="台中市">台中市</option>
+                <option value="新竹市">新竹市</option>
+                <option value="機器人">不玩了 給機器人寫</option>
+            </select>
+            <select name="Township">
+                <option value="null">請選擇</option>
+                <option value="大城鄉">大城鄉</option>
+                <option value="機器人">不玩了 給機器人寫</option>
+                <option value="機器人">不玩了 給機器人寫</option>
+                <option value="機器人">不玩了 給機器人寫</option>
+                <option value="機器人">不玩了 給機器人寫</option>
+            </select>
+                <label for="address"></label>
+                <input type="text" name="address" id="" size="35" maxlength="">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="提交" onclick="">
+        </div>
+    
+    </form>
+
+    <!-- 1-2. 加入 年紀 <input type="radio">-->
+    <!--  id：識別某個HTML文件上的元素-->
+    <!--  class：HTML標籤的分組-->
+    <!--  name：伺服器端根據name取得值；做為radio、checkbox的分組-->
+
+    <!-- 1-3. 加入 職業 <input type="radio"> ，步驟和 1-3 類似-->
+
+    <!-- 1-4. 加入 交通工具 <input type="checkbox"> -->
+
+    <!-- 1-5. 加入 提交  <input type="submit"> -->
+    <!--   a. 比較 <form onsubmit=""> 事件 和 <input type="submit" onclick="" 事件> -->
+    <!--   b. 先確認事件有綁定成功，後面等到javascript章節，我們再回頭撰寫事件和元素取值-->
+
+</body>
+
+</html>
